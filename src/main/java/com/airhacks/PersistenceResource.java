@@ -9,21 +9,25 @@ import javax.enterprise.inject.Produces;
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 @ApplicationScoped
 public class PersistenceResource {
 
-	
+	PersistenceManagerFactory pmf;
+
 	public PersistenceResource() {
 		// TODO Auto-generated constructor stub
 
-		/*
-		 * try { InitialContext context = new InitialContext();
-		 * 
-		 * this.pmf = (PersistenceManagerFactory) context.lookup("java:/TraderDB-PU");
-		 * System.out.println(pmf.toString()); } catch (NamingException e) { // TODO
-		 * Auto-generated catch block e.printStackTrace(); }
-		 */
+		try {
+			InitialContext context = new InitialContext();
+
+			this.pmf = (PersistenceManagerFactory) context.lookup("java:/Test");
+			System.out.println(pmf.toString());
+		} catch (NamingException e) { // TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
@@ -31,7 +35,6 @@ public class PersistenceResource {
 	@RequestScoped
 	public PersistenceManager getPersistenceManager() {
 		System.out.println("BURADA!");
-		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory("java:/datanucleus");
 
 		System.out.println(pmf.toString());
 
