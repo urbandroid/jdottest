@@ -6,6 +6,17 @@
 	<artifactId>jdotest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<jdo.version>3.2.0-m3</jdo.version>
+		<dn.core.version>4.1.4</dn.core.version>
+		<dn.api.jdo.version>4.2.0-m3</dn.api.jdo.version>
+		<dn.rdbms.version>4.1.4</dn.rdbms.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
@@ -16,19 +27,18 @@
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-api-jdo</artifactId>
-			<version>4.2.0-release</version>
+			<version>${dn.api.jdo.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-core</artifactId>
-			<version>4.1.5</version>
+			<version>${dn.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>javax.jdo</artifactId>
-			<version>3.2.0-m3</version>
-
+			<version>${jdo.version}</version>
 		</dependency>
 
 
@@ -36,10 +46,7 @@
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-cache</artifactId>
 			<version>4.0.4</version>
-
 		</dependency>
-
-
 
 		<dependency>
 			<groupId>org.datanucleus</groupId>
@@ -51,9 +58,7 @@
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-rdbms</artifactId>
-			<version>4.1.6</version>
-			
-
+			<version>${dn.rdbms.version}</version>
 		</dependency>
 
 	</dependencies>
@@ -81,11 +86,6 @@
 		</plugins>
 
 	</build>
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<failOnMissingWebXml>false</failOnMissingWebXml>
-	</properties>
 
 
 </project>

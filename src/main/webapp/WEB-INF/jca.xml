@@ -1,0 +1,15 @@
+<connection-factories xmlns="http://www.jboss.org/ironjacamar/schema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema
+    http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+    
+    <tx-connection-factory>
+        <jndi-name>java:/datanucleus</jndi-name>
+        <rar-name>datanucleus-jdo-jca-4.2.0-m3.rar</rar-name>
+        <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+        <config-property name="ConnectionDriverName" type="java.lang.String">org.postgresql.Driver</config-property>
+        <config-property name="ConnectionURL" type="java.lang.String">jdbc:postgresql://localhost:5432/testdb</config-property>
+        <config-property name="UserName" type="java.lang.String">testuser</config-property>
+        <config-property name="Password" type="java.lang.String">sifre</config-property>
+    </tx-connection-factory>
+</connection-factories>

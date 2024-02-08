@@ -1,0 +1,19 @@
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema
+    http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+
+	<datasource jndi-name="java:/TestDS2"
+		pool-name="MyDataSourcePool">
+		<connection-url>jdbc:postgresql://localhost:5432/testdb
+		</connection-url>
+		<driver>postgres</driver>
+		<security>
+			<user-name>testuser</user-name>
+			<password>sifre</password>
+		</security>
+	</datasource>
+
+	<!-- Other datasources can be configured here -->
+
+</datasources>
