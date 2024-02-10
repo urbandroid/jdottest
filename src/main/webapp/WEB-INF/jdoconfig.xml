@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jdoconfig xmlns="https://db.apache.org/jdo/xmlns/jdoconfig_3_2.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://db.apache.org/jdo/xmlns/jdoconfig_3_2
+        https://db.apache.org/jdo/xmlns/jdoconfig_3_2.xsd" version="3.2">
+    <!-- Datastore Txn PMF -->
+    <persistence-manager-factory name="Datastore">
+        <property name="javax.jdo.PersistenceManagerFactoryClass" value="org.datanucleus.api.jdo.JDOPersistenceManagerFactory"/>
+        <property name="javax.jdo.option.ConnectionFactory" value="java:/TestDS"/>
+        <property name="javax.jdo.option.Optimistic" value="false"/>
+        <property name="datanucleus.schema.autoCreateAll" value="true"/>
+    </persistence-manager-factory>
+
+</jdoconfig>
+

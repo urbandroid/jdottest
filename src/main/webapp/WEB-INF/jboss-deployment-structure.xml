@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<jboss-deployment-structure  xmlns="urn:jboss:deployment-structure:1.1">
-<deployment>
-<exclusions>
-</exclusions>
-<dependencies>
-</dependencies>
-</deployment>
+<jboss-deployment-structure
+	xmlns="urn:jboss:deployment-structure:1.1">
+	<deployment>
+		<exclusions>
+		</exclusions>
+		<dependencies>
+			<module name="javax.jdo" />
+		</dependencies>
+	</deployment>
 </jboss-deployment-structure>

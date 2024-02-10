@@ -16,6 +16,7 @@ import javax.ws.rs.core.MediaType;
 
 @Path("users")
 @Stateless
+@TransactionManagement(TransactionManagementType.CONTAINER)
 public class UserResource {
 
 	@Inject
